@@ -1,0 +1,158 @@
+/* Custom reset */
+html {
+  height: 100%;
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+
+  font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6, small, i, em, b, strong, input, button, kbd {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input, button {
+  font: inherit;
+}
+
+button {
+  border: none;
+
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* Main styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+
+  background-color: #2f3542;
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.game-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mic {
+  width: 25.6rem;
+  height: 25.6rem;
+  object-fit: contain;
+}
+
+.title {
+  margin-top: 2rem;
+
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.instruction {
+  margin-top: 0.5rem;
+
+  font-size: 1.2em;
+}
+
+.guess-panel {
+  margin-top: 4rem;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guess-panel.visible {
+  display: flex;
+}
+
+.info {
+  margin-bottom: 1rem;
+}
+
+.guess {
+  padding: 1rem;
+
+  font-size: 1.5em;
+
+  border: 0.1rem solid #ffffff;
+}
+
+.message {
+  margin-top: 1.5rem;
+
+  text-transform: uppercase;
+}
+
+.game-finished-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-top: 3rem;
+
+  color: #000000;
+  font-weight: 500;
+
+  border-radius: 0.4rem;
+
+  background-color: #ffffff;
+}
+
+.game-screen, .game-finished-screen {
+  display: none;
+}
+
+.app[data-screen='game'] .game-screen, .app[data-screen='game-finished'] .game-finished-screen {
+  display: flex;
+}

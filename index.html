@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Speech Guess Number</title>
+
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+
+  <script src="/scripts/index.js" defer></script>
+</head>
+<body id="app" class="app" data-screen="game">
+  <div class="game-screen">
+    <img class="mic" src="/images/mic.png" alt="Microphone" width="256" height="256">
+    <h1 class="title">Guess a number between 1 - 100</h1>
+    <p class="instruction">Speak the number into your microphone</p>
+
+    <div id="guess-panel" class="guess-panel">
+      <p class="info">You said:</p>
+      <b id="guess" class="guess">0</b>
+      <p id="message" class="message">Placeholder message</p>
+    </div>
+  </div>
+
+  <div class="game-finished-screen">
+    <h1 class="title">Congrats! You have guessed the number!</h1>
+    <p class="instruction">It was <span id="puzzled-number">-1</span></p>
+    <a class="button" href="/">Play again</a>
+  </div>
+</body>
+</html>
